@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-grid>
+    <ion-row >
+      <ion-col style="margin-right: 25px;">
+        <ion-img src="./../../assets/logosFRofficiel-small.png" style="width: 12rem;"></ion-img>
+      </ion-col>
+      <ion-col style="float: right;">
+        <ion-img src="./../../assets/slogan-small.png" style="width: 5rem; float: right;"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+<ion-grid justify-content-center align-items-center style="text-align: center;margin: 10%;">
+  <ion-label style="text-align: center;font-family: Almarai;font-weight: 700;font-size: 60px;">! مرحبا</ion-label><br><br>
+  <ion-label style="text-align: center;font-family: Almarai;font-weight: 700;font-size: 19px;">هذا التطبيق مجعول</ion-label>
+</ion-grid>
+<ion-grid >
+  <form [formGroup]="user" (ngSubmit)="onSubmit(user.value)">
+    <ion-grid justify-content-center align-items-center style="text-align: center;">
+  
+      <ion-label style="text-align: center;font-family: Almarai;font-weight: 400;font-size:17px;">بش نجموا نطمانو عليك من دارك و نجاوبو على تساؤلاتك</ion-label>
+    </ion-grid>
+  <ion-row justify-content-center align-items-center>
+    <ion-col style="text-align: -webkit-center;">
+    <ion-item class="roundedInput" style="width:90%;">
+    <!-- <ion-label style="font-size: 15px;"position="floating">Identifant</ion-label> -->
+    <ion-input shape="round" class="mainLoginInput" required type="text" dir="rtl" style="text-align: center;font-family: Almarai;" formControlName="idf" style=" width: 80%;" placeholder="الرقم المعرف"></ion-input>
+  </ion-item><br>
+  <ion-item class="roundedInput" style="width:90%;">
+    <!-- <ion-label style="font-size: 15px;"position="floating">Identifant</ion-label> -->
+    <ion-input type="password" shape="round" class="mainLoginInput" required dir="rtl" style="text-align: center;font-family: Almarai;" formControlName="mdp" style=" width: 80%;" placeholder=" كلمة السر "></ion-input>
+  </ion-item>
+</ion-col> 
+</ion-row>
+  <ion-row style="text-align: center;">
+    <ion-col></ion-col>
+    <ion-col>
+      <ion-button shape="round" style="text-align: center;font-family: Almarai;font-weight: 400;font-size:15px;" color="test" type="submit">دخول</ion-button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</form>
+<div class="test">
+<ion-label  style=" font-family: Almarai;font-weight: 400;font-size:10px;"> © وزارة الصحة</ion-label>
+</div>
+</ion-grid>
+
+</ion-content>

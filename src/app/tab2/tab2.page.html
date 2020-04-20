@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-grid>
+    <ion-row >
+      <ion-col style="margin-right: 25px;">
+        <ion-img src="./../../assets/logosFRofficiel-small.png" style="width: 12rem;"></ion-img>
+      </ion-col>
+      <ion-col style="float: right;">
+        <ion-img src="./../../assets/slogan-small.png" style="width: 5rem; float: right;"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-title style="text-align: center; margin-top:2%;font-family: Almarai;font-weight: 700;font-size: 30px;">الإجابات</ion-title>
+  <ion-grid>
+
+
+    <ion-row>
+      <ion-col>
+       <ion-list>
+       <ion-item *ngFor="let item of myResponse">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-label style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;float:right;color:green">{{item.fromDoctor.firstName}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div dir='rtl'style="text-align:center; font-family: Almarai;font-weight: 500;font-size:0.9rem;float:right;">{{item.content}}</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-label style="text-align:center; font-family: Almarai;font-weight: 700;color:#D1262D;font-size:1rem;float:left;">{{item.survey.createdAt}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+       </ion-item>
+       </ion-list>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

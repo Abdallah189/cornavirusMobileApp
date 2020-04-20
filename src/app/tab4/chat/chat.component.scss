@@ -1,0 +1,88 @@
+// colors
+.ion-color-toolbar {
+    --ion-color-base: var(--ion-color-toolbar);
+    --ion-color-base-rgb: var(--ion-color-toolbar-rgb);
+    --ion-color-contrast: var(--ion-color-toolbar-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-toolbar-contrast-rgb);
+    --ion-color-shade: var(--ion-color-toolbar-shade);
+    --ion-color-tint: var(--ion-color-toolbar-tint);
+  }
+  
+  //
+  
+  #container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  ion-content ion-toolbar {
+    --background: translucent;
+  }
+  
+  .toolbar{
+    text-align-last: center;
+  }
+  .message {
+      padding: 10px;
+      border-radius: 25px;
+      margin-bottom: 4px;
+      white-space: pre-rap;
+      font-size:small;
+  }
+  
+  .other-message{
+      background-color: #D4DAE1;
+      color:#2A3743;
+     
+  }
+  
+  .my-message{
+      background-color: #D1262D;
+      color:#fff;
+  
+  }
+  
+  .time{
+      color: #dfdfdf;
+      float: right;
+      font-size: small;
+  }
+  .user{
+    font-size: xx-small;
+    vertical-align: text-top;
+  }
+  .message-input{
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .msg-btn{
+    --padding-start: 0.5em;
+    --padding-end: 0.5em;
+  }

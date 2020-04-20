@@ -1,0 +1,26 @@
+.roundedInput {
+    --border-color: var(--ion-color-medium-shade);
+    --border-radius: 25px;
+    --border-width: 0.5px;
+    --box-shadow: 1px gray;
+    --highlight-height: 0;
+    --background: #f8f9fa;
+   }
+
+   .ion-color-test {
+    --ion-color-base: var(--ion-color-test);
+    --ion-color-base-rgb: var(--ion-color-test-rgb);
+    --ion-color-contrast: var(--ion-color-test-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-test-contrast-rgb);
+    --ion-color-shade: var(--ion-color-test-shade);
+    --ion-color-tint: var(--ion-color-test-tint);
+  }
+
+  .test {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+

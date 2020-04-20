@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-grid>
+    <ion-row >
+      <ion-col style="margin-right: 25px;">
+        <ion-img src="./../../assets/logosFRofficiel-small.png" style="width: 12rem;"></ion-img>
+      </ion-col>
+      <ion-col style="float: right;">
+        <ion-img src="./../../assets/slogan-small.png" style="width: 5rem; float: right;"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+<ion-grid style="margin-top: 5%;"> 
+  <ion-row>
+    <ion-col dir="rtl"style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;">
+      مرحبا
+      <ion-label style="text-align:center;margin-right: 2%; font-family: Almarai;font-weight:500;font-size:2rem;" >خالد عباس </ion-label> 
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col dir="rtl"style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;">
+  كيفاه تحس روحك ليوم ؟      <ion-label></ion-label> 
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <ion-slides  #slides (ionSlideWillChange)="doCheck()" >
+      <ion-slide style="text-align: center;"*ngFor="let item of questions;let ind=index">
+     <ion-grid>
+      
+       <ion-img class="sick" style="width :70%; height :auto ; display: block;
+       margin-left: auto;
+       margin-right: auto;"[src]="item.img"></ion-img>
+       <ion-label style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;" >{{ item.des }}</ion-label><br>
+       <ion-radio-group (ionChange)="addValue(item.id,item.des,ind,$event)">
+       <!-- <ion-row>
+         <ion-col><ion-item style="text-align: center; "><ion-radio id="{{item.id}}" (ionChange)="addValue($event)" mode="" slot="end" color="test" style="width: 2em;height: 2em;" [(ngModel)]="item.resp.tr"></ion-radio><ion-label dir="rtl"style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;" >نعم</ion-label></ion-item></ion-col>
+         <ion-col style="text-align: center"><ion-item style="text-align: center;"><ion-radio id="{{item.id}}F" (ionChange)="addValue($event)" mode="" color="test" style="width: 2em;height: 2em;" [(ngModel)]="item.resp.fl"></ion-radio><ion-label dir="rtl"style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;" >لا</ion-label></ion-item></ion-col>
+        </ion-row>  -->
+        <ion-row>
+          <ion-col><ion-item lines="none" style="text-align: center; "><ion-radio id="{{item.id}}" mode="" slot="end" color="test" style="width: 2em;height: 2em;" value="oui"></ion-radio><ion-label dir="rtl"style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;" value="4" >نعم</ion-label></ion-item></ion-col>
+          <ion-col style="text-align: center"><ion-item lines="none" style="text-align: center;"><ion-radio id="{{item.id}}F" mode="" color="test" style="width: 2em;height: 2em;" value="No"></ion-radio><ion-label dir="rtl"style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;" value="4">لا</ion-label></ion-item></ion-col>
+       </ion-row> 
+      </ion-radio-group>
+
+     </ion-grid> 
+    </ion-slide>
+  </ion-slides>
+<div style="text-align: center;">
+  <ion-button (click)="pred(slides)" style="text-align:center; font-family: Almarai;font-weight: 700;font-size:0.8rem;" color="pred" *ngIf="!disablePrevBtn">الرجوع</ion-button>
+  <ion-button (click)="next(slides)" style="text-align:center; font-family: Almarai;font-weight: 700;font-size:0.8rem;" color="test" *ngIf="!disableNextBtn else elseBlock">التالي</ion-button>
+  <ng-template #elseBlock>  <ion-button (click)="onSubmit(slides)" style="text-align:center; font-family: Almarai;font-weight: 700;font-size:0.8rem;" color="success" *ngIf="!disablePrevBtn">إرسال</ion-button></ng-template>
+</div>
+
+
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="toolbar">
+    <ion-title class="toolbar">
+      احكي مع الاخصائي النفسي
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content>
+  <ion-grid>
+    <ion-row *ngFor="let message of messages">
+      <ion-col size="9" *ngIf="currentUser !== message.user" class="message other-message">
+        <!-- <ion-label class="user">{{message.user}}</ion-label><br> -->
+        <span dir="rtl">{{message.msg}}</span><br>
+      </ion-col>
+      <ion-col offset="3" size="9" *ngIf="currentUser == message.user" class="message my-message">
+        <!-- <ion-label class="user">You</ion-label><br> -->
+        <span dir="rtl">{{message.msg}}</span><br>
+        
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-row align-items-center>
+      <ion-col size="10">
+        <textarea autosize maxRows="3" [(ngModel)]="newMsg" class="message-input" dir="rtl"></textarea>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button (click)="sendMessage()" expand="block" fill="clear" color="primary" [disabled]="newMsg ===''" class="msg-btn">
+          <ion-icon name="send-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

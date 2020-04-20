@@ -1,0 +1,32 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+.ion-color-test {
+  --ion-color-base: var(--ion-color-test);
+  --ion-color-base-rgb: var(--ion-color-test-rgb);
+  --ion-color-contrast: var(--ion-color-test-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-test-contrast-rgb);
+  --ion-color-shade: var(--ion-color-test-shade);
+  --ion-color-tint: var(--ion-color-test-tint);
+}
+
+.ion-color-pred {
+  --ion-color-base: var(--ion-color-pred);
+  --ion-color-base-rgb: var(--ion-color-pred-rgb);
+  --ion-color-contrast: var(--ion-color-pred-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-pred-contrast-rgb);
+  --ion-color-shade: var(--ion-color-pred-shade);
+  --ion-color-tint: var(--ion-color-pred-tint);
+}
+
+
+@media (min-width : 400px) and (max-height : 700px) {
+  .sick{
+    display: none;
+  }
+}
+
+@media (min-height: 767px){
+.ion-img {
+display: none !important;
+}}
