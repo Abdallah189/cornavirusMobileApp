@@ -40,8 +40,7 @@ export class Tab1Page implements OnInit{
   ngOnInit(){
  
     console.log(this.date);
-    
-    
+       
     // this.rep=this.form.group({
     //   'q1':FormControl,
     //   'q2':FormControl,
@@ -159,7 +158,7 @@ async presentLoading() {
             console.log('Your psw', this.token);
 
             this.rp.reponsePost(this.SendBodyFinal,this.token).subscribe((Response)=>{
-              this.presentLoading();
+              // this.presentLoading();
               if(Response['message']=="Survey created"){
                 Swal.fire({
                   icon: 'success',

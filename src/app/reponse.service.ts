@@ -4,7 +4,7 @@ import { UserService } from './auth/user.service';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage';
-const axios = require('axios');
+// const axios = require('axios');
 
 @Injectable({
   providedIn: 'root'
@@ -82,36 +82,36 @@ export class ReponseService {
     //gettest
     // return this.exempleResponse;
   }
-getAnswer(token:any){
-console.log(token);
+// getAnswer(token:any){
+// console.log(token);
 
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Authorization':`Bearer ${ token }`
-      })
-    };
-    const instance = axios.create({
-  baseURL: this.url+"answer",
-  headers: {
-    'Content-Type':  'application/json',
-    'Authorization':`Bearer ${ token }`
-  }
-});
-instance.get()
-  .then(function (response) {
-    // handle success
-    // return response
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    // handle error
-    return error
-    console.log(error);
-  })
-  .finally(function () {
-    return null;
-    // always executed
-  });
-  }
+//     const httpOptions = {
+//       headers: new HttpHeaders({
+//         'Content-Type':  'application/json',
+//         'Authorization':`Bearer ${ token }`
+//       })
+//     };
+//     const instance = axios.create({
+//   baseURL: this.url+"answer",
+//   headers: {
+//     'Content-Type':  'application/json',
+//     'Authorization':`Bearer ${ token }`
+//   }
+// });
+// instance.get()
+//   .then(function (response) {
+//     // handle success
+//     // return response
+//     console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     return error
+//     console.log(error);
+//   })
+//   .finally(function () {
+//     return null;
+//     // always executed
+//   });
+//   }
 }
