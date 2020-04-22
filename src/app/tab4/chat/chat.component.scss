@@ -8,6 +8,14 @@
     --ion-color-tint: var(--ion-color-toolbar-tint);
   }
   
+  .ion-color-test {
+    --ion-color-base: var(--ion-color-test);
+    --ion-color-base-rgb: var(--ion-color-test-rgb);
+    --ion-color-contrast: var(--ion-color-test-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-test-contrast-rgb);
+    --ion-color-shade: var(--ion-color-test-shade);
+    --ion-color-tint: var(--ion-color-test-tint);
+  }
   //
   
   #container {
@@ -44,15 +52,17 @@
     text-align-last: center;
   }
   .message {
-      padding: 10px;
+      padding: 15px;
       border-radius: 25px;
       margin-bottom: 4px;
       white-space: pre-rap;
       font-size:small;
+      direction: rtl;
+    
   }
   
   .other-message{
-      background-color: #D4DAE1;
+      background-color: rgba(231, 232, 233, 0.836);
       color:#2A3743;
      
   }
@@ -74,8 +84,9 @@
   }
   .message-input{
     width: 100%;
-    border: 1px solid var(--ion-color-medium);
-    border-radius: 10px;
+    
+    border: 0.5px solid var(--ion-color-medium);
+    border-radius: 25px;
     background: #fff;
     resize: none;
     padding-left: 10px;

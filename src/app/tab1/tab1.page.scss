@@ -10,6 +10,15 @@ ion-content ion-toolbar {
   --ion-color-tint: var(--ion-color-test-tint);
 }
 
+.ion-color-second {
+  --ion-color-base: var(--ion-color-second);
+  --ion-color-base-rgb: var(--ion-color-second-rgb);
+  --ion-color-contrast: var(--ion-color-second-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-second-contrast-rgb);
+  --ion-color-shade: var(--ion-color-second-shade);
+  --ion-color-tint: var(--ion-color-second-tint);
+}
+
 .ion-color-pred {
   --ion-color-base: var(--ion-color-pred);
   --ion-color-base-rgb: var(--ion-color-pred-rgb);

@@ -28,8 +28,8 @@ export class Tab4Page implements OnInit {
 
     }).queue([
       {
-        title: 'انا غلبتوا',
-        text: 'أحكيلنا على قصتك مع الكورونا و كيفاش تغلبت عليه',
+        title: 'انا تغلبت على الكورنا',
+        text: 'إحكي لنا كيف كانت نجربتك مع مرض الكورونا',
         input: 'textarea',
         inputPlaceholder: '',
         inputAttributes: {

@@ -2,7 +2,7 @@
   <ion-grid>
     <ion-row >
       <ion-col style="margin-right: 25px;">
-        <ion-img src="./../../assets/logosFRofficiel-small.png" style="width: 12rem;"></ion-img>
+        <ion-img src="./../../assets/logo.svg" style="width: 4rem; margin-left: 10%;"></ion-img>
       </ion-col>
       <ion-col style="float: right;">
         <ion-img src="./../../assets/slogan-small.png" style="width: 5rem; float: right;"></ion-img>
@@ -20,7 +20,7 @@
   <form [formGroup]="user" (ngSubmit)="onSubmit(user.value)">
     <ion-grid justify-content-center align-items-center style="text-align: center;">
   
-      <ion-label style="text-align: center;font-family: Almarai;font-weight: 400;font-size:17px;">بش نجموا نطمانو عليك من دارك و نجاوبو على تساؤلاتك</ion-label>
+      <ion-label style="text-align: center;font-family: Almarai;font-weight: 400;font-size:17px;">كي نطمئن على حالتك و نجيب على تساؤلاتك و نوفر لك الإحاطة النفسية اللازمة</ion-label>
     </ion-grid>
   <ion-row justify-content-center align-items-center>
     <ion-col style="text-align: -webkit-center;">
@@ -42,9 +42,11 @@
     <ion-col></ion-col>
   </ion-row>
 </form>
-<div class="test">
-<ion-label  style=" font-family: Almarai;font-weight: 400;font-size:10px;"> © وزارة الصحة</ion-label>
-</div>
+
 </ion-grid>
 
 </ion-content>
+
+<ion-footer style="text-align-last: center;" class="ion-no-border">
+    <ion-label  style=" font-family: Almarai;font-weight: 400;font-size:10px;"> © Arab Coders</ion-label>
+</ion-footer>
