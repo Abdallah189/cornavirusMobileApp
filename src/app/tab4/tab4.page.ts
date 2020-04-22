@@ -16,6 +16,9 @@ export class Tab4Page implements OnInit {
   goChat(){
     this.nv.navigateRoot('next/tabs/tab4/chat')
   }
+  goToWin(){
+    this.nv.navigateRoot('next/tabs/tab4/win')
+  }
   setSucessStory(){
     Swal.mixin({
       input: 'text',
