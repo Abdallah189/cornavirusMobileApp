@@ -11,11 +11,9 @@
   </ion-grid>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="testRes; else nodata">
  <ion-title style="text-align: center; margin-top:2%;font-family: Almarai;font-weight: 700;font-size: 30px;">الإجابات</ion-title>
   <ion-grid>
-
-
     <ion-row>
       <ion-col>
        <ion-list>
@@ -44,3 +42,9 @@
   </ion-grid>
 
 </ion-content>
+
+<ng-template #nodata>
+<ion-content [fullscreen]="true">
+   <ion-spinner name="bubbles" width="150em" color="danger"></ion-spinner>
+</ion-content>
+</ng-template>

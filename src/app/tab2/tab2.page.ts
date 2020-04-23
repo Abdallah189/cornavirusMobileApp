@@ -11,6 +11,7 @@ import { UserService } from '../auth/user.service';
 export class Tab2Page implements OnInit{
   myResponse:any
   token:any
+  testRes:boolean
   constructor(private resp:ReponseService,private storage: Storage,private user:UserService) {
     this.storage.get('token').then((token) => {
       this.token=token
@@ -27,6 +28,7 @@ export class Tab2Page implements OnInit{
         this.resp.getResponse(this.token).subscribe((Response :Response[])=>{
           console.log(Response);  
           this.myResponse=Response   
+          this.testRes=true
         })
         resolve("I promise to return after one second!");
       }, 1000);

@@ -15,3 +15,9 @@
     --ion-color-shade: var(--ion-color-second-shade);
     --ion-color-tint: var(--ion-color-second-tint);
   }
+  ion-spinner {
+    transform: scale(2);
+    position: fixed;
+      top: 50%;
+      left: 50%;
+  }

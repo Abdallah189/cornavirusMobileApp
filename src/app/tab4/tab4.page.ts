@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { WewinService } from './wewin.service';
+import { Storage } from '@ionic/storage';
 import Swal from 'sweetalert2'
 
 @Component({
@@ -9,7 +11,7 @@ import Swal from 'sweetalert2'
 })
 export class Tab4Page implements OnInit {
 
-  constructor(private nv:NavController) { }
+  constructor(private nv:NavController,private suc:WewinService,private storage:Storage) { }
 
   ngOnInit() {
   }

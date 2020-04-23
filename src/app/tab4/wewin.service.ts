@@ -10,6 +10,7 @@ export class WewinService {
     environment.api
   }`
   constructor(private http:HttpClient) { }
+  
   setWin(token:any,data:any){
     const httpOptions = {
       headers: new HttpHeaders({
@@ -19,7 +20,7 @@ export class WewinService {
     }; 
     return this.http
     .post<String>(
-     this.url+"win/add",data,httpOptions);   
+     this.url+"successstory",data,httpOptions);   
   }
   getWins(token:any){
     const httpOptions = {
@@ -33,7 +34,7 @@ export class WewinService {
     // getFromApiwiththisCode
     return this.http
     .get(
-     this.url+"wins",httpOptions
+     this.url+"successstories/accepted",httpOptions
     );
   }
 }

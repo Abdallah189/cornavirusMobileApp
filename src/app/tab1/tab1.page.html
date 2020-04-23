@@ -25,11 +25,11 @@
     </ion-col>
   </ion-row>
 </ion-grid>
-  <ion-slides  #slides (ionSlideWillChange)="doCheck()" >
+  <ion-slides #slides (ionSlideWillChange)="doCheck()" >
       <ion-slide style="text-align: center;"*ngFor="let item of questions;let ind=index">
      <ion-grid>
       
-       <ion-img class="sick" style="width :50%; height :auto ; display: block;
+       <ion-img class="sick" style="width :45%; height :auto ; display: block;
        margin-left: auto;
        margin-right: auto;"[src]="item.img"></ion-img>
        <ion-row class="ion-align-items-center" style="justify-content: center; background-color: #D1262D; width: 101%;">

@@ -4,33 +4,30 @@
     تجارب واقعية     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content [fullscreen]="true" *ngIf="testRes; else nodata">
   <ion-title style="text-align: center; margin-top:2%;font-family: Almarai;font-weight: 700;font-size: 20px;">بعض قصص مكافحين ضد الكورونا</ion-title>
-  <ion-grid>
+   <ion-card *ngFor="let item of story" style="border-radius: 10px;">
+      <ion-card-header dir="rtl">
+      <!-- <ion-card-subtitle></ion-card-subtitle> --> 
+       <ion-card-title style="font-family: Almarai;">{{item.createdBy.firstName}} {{ item.createdBy.lastName}}</ion-card-title>
+      </ion-card-header>
+    <ion-card-content dir='rtl'>
+    <ion-grid>
     <ion-row>
-      <ion-col>
-       <ion-list>
-       <ion-item >
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <ion-label style="text-align:center; font-family: Almarai;font-weight: 700;font-size:1rem;float:right;color:green">إسم مستعار</ion-label>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <div dir='rtl'style="text-align:center; font-family: Almarai;font-weight: 500;font-size:0.9rem;float:right;">القصصصصصصصصصصصصصصصصصصصصصصصة</div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-label style="text-align:center; font-family: Almarai;font-weight: 700;color:#D1262D;font-size:1rem;float:left;">اليوم</ion-label>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-       </ion-item>
-       </ion-list>
-    </ion-col>
+        {{ item.content }}
     </ion-row>
-  </ion-grid>
+    <ion-row style="float :left;color:red;">
+    {{ item.createdAt|date : 'yyyy/dd/MM' }}
+    </ion-row>
+    </ion-grid>
+
+     <!-- <ion-icon name="heart" color="danger"></ion-icon> -->  
+   </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ng-template #nodata>
+<ion-content [fullscreen]="true">
+   <ion-spinner name="bubbles" width="150em" color="danger"></ion-spinner>
+</ion-content>
+</ng-template>
