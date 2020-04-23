@@ -9,7 +9,10 @@
    <ion-card *ngFor="let item of story" style="border-radius: 10px;">
       <ion-card-header dir="rtl">
       <!-- <ion-card-subtitle></ion-card-subtitle> --> 
-       <ion-card-title style="font-family: Almarai;">{{item.createdBy.firstName}} {{ item.createdBy.lastName}}</ion-card-title>
+      <ion-card-title style="font-family: Almarai;">   
+           <ion-label> {{item.createdBy.firstName}} {{ item.createdBy.lastName}} </ion-label> 
+           <ion-icon src="./../../../assets/trash.svg" style="float:left;width:12em;heigth:12em" *ngIf="item.createdBy.email===user" (click)="delete(item.id)"></ion-icon>
+      </ion-card-title>
       </ion-card-header>
     <ion-card-content dir='rtl'>
     <ion-grid>

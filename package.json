@@ -37,6 +37,7 @@
     "cordova-plugin-local-notification": "^0.9.0-beta.2",
     "cordova-sqlite-storage": "^5.0.0",
     "core-js": "^2.5.4",
+    "jwt-decode": "^2.2.0",
     "ngx-autosize": "^1.7.5",
     "rxjs": "~6.5.1",
     "rxjs-compat": "^6.5.5",

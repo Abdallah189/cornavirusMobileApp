@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { WewinService } from './wewin.service';
 import { Storage } from '@ionic/storage';
 import Swal from 'sweetalert2'
+import * as jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-tab4',
@@ -10,8 +11,13 @@ import Swal from 'sweetalert2'
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
-
-  constructor(private nv:NavController,private suc:WewinService,private storage:Storage) { }
+   token:any
+  constructor(private nv:NavController,private suc:WewinService,private storage:Storage) {
+    this.storage.get("token").then((token)=>{
+      this.token=token
+      console.log("takk",jwt_decode(this.token));
+    })
+   }
 
   ngOnInit() {
   }
@@ -40,8 +46,14 @@ export class Tab4Page implements OnInit {
       },         
     ]).then((result) => {
       if (result.value) {
-        const answers = JSON.stringify(result.value)
-        console.log(answers);        
+        const answers =result.value
+        let res:any
+        res={content :answers[0]}
+        this.suc.setWin(this.token,res).subscribe((res)=>{
+          console.log(res);
+          
+        })
+        console.log(res);        
       }
     })
   }

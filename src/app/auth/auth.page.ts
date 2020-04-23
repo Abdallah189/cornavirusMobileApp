@@ -23,10 +23,10 @@ export class AuthPage implements OnInit {
   constructor(private form:FormBuilder,private nv:NavController,private userService:UserService,public localNotifications: LocalNotifications,private storage: Storage) { 
     this.storage.get('user').then((val) => {
       this.login=val
-      console.log('Your login', val);
+      // console.log('Your login', val);
     });
     // this.storage.set('token',"")  
-    // this.storage.set('connect',false) 
+    // this.storage.set('connect',false)
     this.storage.get('token').then((val) => {
       this.tok=val
       console.log('Your psw', this.tok.length);

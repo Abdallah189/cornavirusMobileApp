@@ -37,4 +37,15 @@ export class WewinService {
      this.url+"successstories/accepted",httpOptions
     );
   }
+  del(token:any,id:any){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization':`Bearer ${ token }`
+      })
+    }; 
+    return this.http
+    .delete<String>(
+     this.url+"successstory/delete/"+id,httpOptions);   
+  }
 }
