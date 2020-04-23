@@ -46,6 +46,6 @@ export class WewinService {
     }; 
     return this.http
     .delete<String>(
-     this.url+"successstory/delete/"+id,httpOptions);   
+     this.url+"successstory/delete/"+id,httpOptions); 
   }
 }
