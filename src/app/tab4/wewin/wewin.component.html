@@ -8,18 +8,21 @@
   <ion-title style="text-align: center; margin-top:2%;font-family: Almarai;font-weight: 700;font-size: 20px;">بعض قصص مكافحين ضد الكورونا</ion-title>
    <ion-card *ngFor="let item of story" style="border-radius: 10px;">
       <ion-card-header dir="rtl">
+        
       <!-- <ion-card-subtitle></ion-card-subtitle> --> 
       <ion-card-title style="font-family: Almarai;">   
-           <ion-label> {{item.createdBy.firstName}} {{ item.createdBy.lastName}} </ion-label> 
-           <ion-icon src="./../../../assets/trash.svg" style="float:left;width:12em;heigth:12em" *ngIf="item.createdBy.email===user" (click)="delete(item.id)"></ion-icon>
+        <ion-row>
+          <ion-col size="10">    <ion-label style="text-align: center; font-family: Almarai;font-weight: 500;font-size:1.5rem;"> {{item.createdBy.firstName}} {{ item.createdBy.lastName}} </ion-label> </ion-col>
+          <ion-col size="2">  <ion-img src="./../../../assets/trash.svg" style="float:left;width:1.5em;" *ngIf="item.createdBy.email===user" (click)="delete(item.id)"></ion-img></ion-col>
+        </ion-row>   
       </ion-card-title>
       </ion-card-header>
     <ion-card-content dir='rtl'>
     <ion-grid>
-    <ion-row>
+    <ion-row style="text-align: center; font-family: Almarai;font-weight: 500;font-size:15px;">
         {{ item.content }}
     </ion-row>
-    <ion-row style="float :left;color:red;">
+    <ion-row style="float :left;color:red; font-family: Almarai;font-weight: 500;font-size:15px;">
     {{ item.createdAt|date : 'yyyy/dd/MM' }}
     </ion-row>
     </ion-grid>
