@@ -12,8 +12,21 @@ export class ChatComponent implements OnInit {
   newMsg = '';
   
   @ViewChild('content', { static: false }) content: IonContent;
+   url = new URL('http://localhost:3000/.well-known/mercure');
+  ngOnInit() {
 
-  ngOnInit() {}
+    this.url.searchParams.append('topic', 'http://example.com/books/1');
+    // Subscribe to updates of several Book resources
+    this.url.searchParams.append('topic', 'http://example.com/books/2');
+    // All Review resources will match this pattern
+    this.url.searchParams.append('topic', 'http://example.com/reviews/{id}');
+
+    const eventSource = new EventSource(this.url+"");
+    eventSource.onmessage = event => {
+      console.log(JSON.parse(event.data));
+    }
+
+  }
 
     messages = [
       {
