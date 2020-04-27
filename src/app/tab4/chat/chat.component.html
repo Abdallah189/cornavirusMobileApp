@@ -30,7 +30,7 @@
       </ion-col>
       <ion-col size="2">
         <ion-button (click)="sendMessage()" expand="block" fill="clear" color="primary" [disabled]="newMsg ===''" class="msg-btn">
-          <ion-img src="./../../assets/send.svg" style="width: 5rem; float: right;"></ion-img>
+          <ion-img src="./../../assets/send.svg" style="width: 5rem; float: right;"(click)="envoyez()"></ion-img>
         </ion-button>
       </ion-col>
     </ion-row>

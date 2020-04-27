@@ -25,8 +25,8 @@ export class AuthPage implements OnInit {
       this.login=val
       // console.log('Your login', val);
     });
-    // this.storage.set('token',"")  
-    // this.storage.set('connect',false)
+    this.storage.set('token',"")  
+    this.storage.set('connect',false)
     this.storage.get('token').then((val) => {
       this.tok=val
       console.log('Your psw', this.tok.length);

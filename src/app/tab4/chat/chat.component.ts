@@ -12,44 +12,47 @@ export class ChatComponent implements OnInit {
   newMsg = '';
   
   @ViewChild('content', { static: false }) content: IonContent;
-   url = new URL('http://localhost:3000/.well-known/mercure');
+  //  url = new URL('http://198.168.1.11:3000/.well-known/mercure');
+  //  hub:any
+  messages = [];
   ngOnInit() {
+  //   let loadData = (url)=> {
+  //     fetch(url).then(response => {
+  //         const hubUrl = response.headers.get('Link').match(/<([^>]+)>;\s+rel=(?:mercure|"[^"]*mercure[^"]*")/)[1];
+  //         this.hub = new URL(hubUrl);
+  //         this.hub.searchParams.append('topic', 'http://send.com/send');
+  //         const eventSource = new EventSource(this.hub,{withCredentials:true});
+  //         console.log(eventSource);
+  //         eventSource.onmessage = event => {
+  //             console.log('never givUP') ;
+  //             let data = event.data;
+  //             console.log(data);
+  //             console.log("run");
+  //         }
+  //     });
+  // };
+  //  loadData("http://192.168.1.11:8000/")
 
-    this.url.searchParams.append('topic', 'http://example.com/books/1');
-    // Subscribe to updates of several Book resources
-    this.url.searchParams.append('topic', 'http://example.com/books/2');
-    // All Review resources will match this pattern
-    this.url.searchParams.append('topic', 'http://example.com/reviews/{id}');
-
-    const eventSource = new EventSource(this.url+"");
-    eventSource.onmessage = event => {
-      console.log(JSON.parse(event.data));
-    }
-
+ 
   }
 
-    messages = [
-      {
-        user: 'khaled',
-        createdAt: 133333,
-        msg: 'السلام عليكم '
-      },
-      {
+  envoyez(){
+    setTimeout(() => {
+      this.messages.push({
         user: 'rojlaa',
         createdAt: 133333,
-        msg: 'السلام مرحبا بيك انا الدكيور امين بش نجم نعاونك'
-      },
-      {
-        user: 'khaled',
-        createdAt: 133333,
-        msg: 'راني خايف يا دكتور ملقيت منعمل تعبني برشا المرض و منجم نحكي معا حد و قلقت حابب نخرج' 
-      },
-      {
+        msg: "Hello I'am doctor iskander"
+      })
+    }, 4000);
+    setTimeout(() => {
+      this.messages.push( {
         user: 'rojlaa',
         createdAt: 133333,
-        msg: 'مفماش حاجة تخليك تخاف الفيرويس ضعيف و بدنك اقوى منوا اما كي تخرج و قتها بش يضعف بدنك كي تشوف الي تحبوا خيف عليك و انتي خيف عليه و الاصعب كي تعطيه الفيرويس و انتي تشفي و هوا بعد ينجم يرجعلك الفيريس و نقل المرض للي تحبوه شوف تجارب الي تعفاوا قبلك وبش ينصحوك'
-      },
-    ];
+        msg: 'can i help you'
+      })
+    }, 7000);
+  }
+ 
   
     constructor() {}
   

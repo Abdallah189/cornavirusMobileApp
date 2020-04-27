@@ -120,7 +120,7 @@ async presentLoading() {
           title: 'خطأ ',
           confirmButtonText:'<ion-icon src="../../assets/icon/thumbs-up-solid.svg" style=""></ion-icon> حسنا',
           confirmButtonColor:'red',
-          text :'يجب اكمال ملئ المعطيات'+'latitude '+this.lat+' longitude '+this.logn
+          text :'يجب اكمال ملئ المعطيات'
         })
         slides.slideTo(this.reponse[index].indexSlide);
          test=false;
